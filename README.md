@@ -1,6 +1,8 @@
 # TempeHS Ardunio Bootcamp
 This is the folder structure and core files for students to participate in the TempeHS Ardunio Bootcamp
 
+Before you begin, install [Arduino IDE for Windows](https://drive.google.com/file/d/1ha-3JTMwprRaKoNczq-eIYs7LrxqR_wl/view?usp=drive_link) or [Arduino IDE for MAC](https://drive.google.com/file/d/1hbWTW9vQ1C1OLoO4T3Ryvpsaqmj3jIQ2/view?usp=drive_link)
+
 ## Links:
 1. [Design Toolkit](https://tempehs.github.io/designToolKit/)
 2. [TempeHS Arduino Boilerplate](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate) - Including the school sensor, module, shield and electronic component catalogue.
