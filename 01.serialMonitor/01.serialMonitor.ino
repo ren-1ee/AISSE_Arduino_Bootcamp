@@ -9,8 +9,9 @@
 	5. I understand the impact of having more than one setup or loop methods in my sketch
   
   Student Notes: 
-	'Serial.println' will print text to a new line in serial monitor
-
+    'Serial.println' will print text then add a paragraph key.
+    Arduino is case-sensitve.
+    Make sure 'No Line Ending' is set for now.
   Documentation: 
 	https://www.arduino.cc/reference/en/language/functions/communication/serial/
 	https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter
@@ -19,10 +20,12 @@
 // The setup function runs once when you press reset or power the board
 void setup() {
   Serial.begin(9600);
-  Serial.print("Hello World!");
+  Serial.println("Serial monitor is configured to 9600br.");
 }
 
 // The loop function runs over and over again forever
 void loop() {
-
+  while(!Serial.available());
+  String Jeff = Serial.readString();
+  Serial.println(Jeff);
 }
