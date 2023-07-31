@@ -19,16 +19,16 @@
 // int myInt = 3;
 String myString = "This is a string.";
 bool myBool = false; // REFER TO SUCCESS CRITERIA 3
-float myFloat = 1.1; // Some languages require a 'f' to be present at the end of the number e.g. '1.1f'.
-unsigned static long myLong = 69.14159265358979323846264338;
+float myFloat = 1.1234567; // Some languages require a 'f' to be present at the end of the number e.g. '1.1f'.
+unsigned static long myLong = 69.1415926; // There's a limit on how many decimal place there can be in float and long 'numbers'.
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Serial Monitor Is configured to 9600br");
+  Serial.println("Serial Monitor is configured to 9600br");
   Serial.println("----------------------------------------------------");
   Serial.print("Data stored: ");
   myString = String(myLong);
-  Serial.println(myLong);
+  Serial.println(myFloat, 3);
 }
 
 void loop() {
