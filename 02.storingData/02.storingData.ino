@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author: Crawford Lieu
   Learning Intention: The students will learn about the different data types used in the C++ language and how they can be converted for storage or computation
   Success Criteria:
     1. I understand and can store variables in the datatypes string, interger, float, longs and boolean

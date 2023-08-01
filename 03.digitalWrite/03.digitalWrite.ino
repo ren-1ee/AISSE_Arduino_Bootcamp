@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author: Crawford Lieu
   Learning Intention: The students will learn about configuring PINs and how to write binary data to a specific PIN.
   Success Criteria:
     1. I understand how to configure a PIN for outputting data
@@ -13,7 +13,7 @@
     9. I can apply this knowledge to the LED & Buzzer in the sensor kit
 
   Student Notes: 
-
+    https://www.tinkercad.com/things/iAjyVRaGk9N-glorious-vihelmo/editel?sharecode=uN1C49l_TY1LJ9fkwMELtqhO8mTEWbHdrw0T6YkuYhM
   Documentation: 
     https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/
     https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/
@@ -23,10 +23,46 @@
 
 */
 
-void setup() {
+static unsigned int onBoardLED = 13;
+static unsigned int onBreadLED = 12;
+bool LEDStatus = false;
 
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Serial monitor configured to 9600br.");
+  Serial.println("------------------------------------------------------");
+  pinMode(onBreadLED, OUTPUT);
 }
 
 void loop() {
-
+  LEDStatus = !LEDStatus;
+  digitalWrite(onBreadLED, !LEDStatus);
+  Serial.print("onBreadLED value: ");
+  Serial.print(digitalRead(onBreadLED));
+  Serial.println(",");
+  delay(1000);
 }
+
+// Old code below
+
+/*
+static unsigned int onBoardLED = 13;
+bool LEDStatus = false;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Serial monitor configured to 9600br.");
+  Serial.println("------------------------------------------------------");
+  pinMode(onBoardLED, OUTPUT);
+}
+
+void loop() {
+  LEDStatus = !LEDStatus;
+  digitalWrite(onBoardLED, !LEDStatus);
+  Serial.print("onBoardLED value: ");
+  Serial.print(digitalRead(onBoardLED));
+  Serial.println(",");
+  delay(100);
+}
+*/
