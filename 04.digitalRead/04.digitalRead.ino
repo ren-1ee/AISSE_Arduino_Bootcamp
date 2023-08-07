@@ -11,7 +11,8 @@
     7. I can apply this knowledge to the Button and the Line Finder in the sensor kit
 
   Student Notes: 
-
+    https://www.tinkercad.com/things/iD7WsxizPuy-shiny-jaagub-jofo/editel?sharecode=rqBgzSALRhdO5Ga_KdmMBAG8xqI71wLcpCig39BEUVQ
+    If a variable is digital, it can  written as is in an 'if' statement.
   Documentation: 
     https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/
     https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/
@@ -23,6 +24,7 @@
 static unsigned int myLED = 4;
 static unsigned int myBuzzer = 3;
 static unsigned int myButton = 2;
+static unsigned int myLineSensor = 8;
 
 void setup() {
   Serial.begin(9600);
@@ -31,11 +33,20 @@ void setup() {
   pinMode(myLED, OUTPUT);
   pinMode(myBuzzer, OUTPUT);
   pinMode(myButton, INPUT);
+  pinMode(myLineSensor, INPUT);
 }
 
 void loop() {
   int val = digitalRead(myButton);
-  Serial.println(String(val));
+  int senVal = digitalRead(myLineSensor);
+  Serial.print("myButtonValue:");
+  Serial.print(String(val));
+  Serial.print(",");
+  Serial.print("lineSensorValue:");
+  Serial.println(String(senVal));
+  if (val) {
+    // myAlert();
+  }
 }
 
 void myAlert() {
