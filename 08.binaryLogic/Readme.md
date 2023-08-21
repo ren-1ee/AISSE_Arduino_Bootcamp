@@ -10,7 +10,7 @@
 - *`if (x = 3)` will always return true because the code has assigned the value of 3 to `x` and returned `true` that the assignment was successful. This is a common logic error.*
 
 ## IF ELSE Statement
-![IF ELSE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/if_else_statement.drawio.png)
+![IF ELSE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/if_else_statement.drawio.png)
 
     int x = 3;
     if (x == 3) {
@@ -20,7 +20,7 @@
     }
 
 ## IF IF ELSE ELSE Statement
-![IF IF ELSE ELSE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/if_else_if_statement.drawio.png)
+![IF IF ELSE ELSE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/if_else_if_statement.drawio.png)
 
     int x = 3;
     if (x == 3) {
@@ -34,7 +34,7 @@
 - *If more than one binary logic test is `true` only the first branch will be executed as the flow chart shows that once an `if` or `else if` branch is executed, the logic flow exists the conditional structure.*
 
 ## WHILE Statement
-![WHILE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/while_statement.drawio.png)
+![WHILE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/while_statement.drawio.png)
 
     int x = 0;
     while (x < 200) {
@@ -45,7 +45,7 @@
 - *If no logic (i.e. an incrementor or a decrementor) is established to escape the loop it will repeat endlessly.*
 
 ## DO WHILE Statement
-![DO WHILE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/do_while_statement.drawio.png)
+![DO WHILE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/do_while_statement.drawio.png)
 
     int x = 0;
     do {
@@ -57,7 +57,7 @@
 - *If no logic (i.e. an incrementor or a decrementor) is established to escape the loop it will repeat endlessly.*
 
 ## FOR Statement
-![FOR Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/for_statement.drawio.png)
+![FOR Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/for_statement.drawio.png)
 
     for (int i = 0; i <= 255; i++) {
         analogWrite(PWMpin, i);
@@ -65,7 +65,7 @@
     }
 
 ## FOR EACH Statement
-![FOR EACH Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/foreach_statement.drawio.png)
+![FOR EACH Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/foreach_statement.drawio.png)
 
     int arr[]={1,2,3,4,5};   //array initialization
     Serial.print("The elements are: ");
@@ -76,7 +76,7 @@
     }
 
 ## SWITCH CASE Statement
-![SWITCH CASE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/switch_case_statement.drawio.png)
+![SWITCH CASE Statement](https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/08.binaryLogic/switch_case_statement.drawio.png)
 
     int x = random(0, 3);
     switch (x) {
