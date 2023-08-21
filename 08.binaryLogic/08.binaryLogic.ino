@@ -1,12 +1,12 @@
 /*
-  Author: 
-   Learning Intention: The students understand binary logic and apply it to a range of control structures.
+  Author: Crawford Lieu
+  Learning Intention: The students understand binary logic and apply it to a range of control structures.
     1. I understand Binary Logic is asking questions that only have a true and false outcome
     2. I can apply different comparison operators to get a desired outcome in a basic if else control structure 
     3. I understand 'if', 'if else', and 'if else if else'
     4. I understand the differenvce between a 'nested if', and using boolean operators
     5. I can read a simple logic flowchart
-    6. I know how to find teh documentation for advanced control structures like 'for', 'do while', 'while', and 'switch case'
+    6. I know how to find the documentation for advanced control structures like 'for', 'do while', 'while', and 'switch case'
 
   Student Notes: 
   Comparison Operators
@@ -31,10 +31,23 @@
     
 */
 
-void setup() {
+static unsigned int myLED = 13;
 
+void setup() {
+  Serial.begin(9600);
+  Serial.println("--------------------------------");
+  Serial.println("SM configured @9600br.");
+  Serial.println("--------------------------------");
+  pinMode(myLED, OUTPUT);
 }
 
-void loop() {
 
+void loop() {
+  for (int i = 0; i <= 5; i++) {
+		digitalWrite(myLED, HIGH);
+		delay(500);
+    digitalWrite(myLED, LOW);
+    delay(500);
+    Serial.println(i);
+	}
 }
