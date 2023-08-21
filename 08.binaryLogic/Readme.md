@@ -1,6 +1,6 @@
 # LOGIC FLOWCHARTS
 ## IF Statement
-![IF Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/08.binaryLogic/if_statement.drawio.png)
+![IF Statement](https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/08.binaryLogic/if_statement.drawio.png)
 
     int x = 3;
     if (x == 3) {
