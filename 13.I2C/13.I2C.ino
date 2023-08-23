@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author:
   Learning Intention: The students will learn to use the I2C communication protocol to send and receive data with 2IC sensors and actuators
     1. I understand that I2C is a communication protocol
     2. I understand that each I2C needs it's own I2C Channel
@@ -10,8 +10,8 @@
     7. I can successfully receive data from either Temperature & Humidity Sensor, Air pressure Sensor or Acceleration Sensor in the sensor kit.
 
   Student Notes:
-    
-  Documentation: 
+
+  Documentation:
     https://www.arduino.cc/reference/en/language/functions/communication/wire/
 
 
@@ -19,8 +19,7 @@
 
 */
 
-//The Wire-h library is built into Ardunio IDE there is no need to side load it like the Ultrasonic Sensor library
-
+// The Wire-h library is built into Ardunio IDE there is no need to side load it like the Ultrasonic Sensor library
 
 void setup() {
 
