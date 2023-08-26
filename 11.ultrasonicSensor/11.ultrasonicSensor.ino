@@ -20,22 +20,16 @@
 
   Schematic:
     https://www.tinkercad.com/things/kngLnqo2HEU?sharecode=OVpOeJsUP3bOHBkzbkWCfGcuSIswqXiISYQiG6UzotA
-    https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/11.ultrasonicSensor/Bootcamp-ultrasonicSensor.png
+    https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/11.ultrasonicSensor/Bootcamp-ultrasonicSensor.png
 */
 
 #include "Ultrasonic.h"
 
-Ultrasonic myUltrasonicSensor(5);
 void setup()
 {
- Serial.begin(9600);
+  
 }
 void loop()
 {
-  long RangeInCentimeters;
-
-  RangeInCentimeters = myUltrasonicSensor.MeasureInCentimeters(); // two measurements should keep an interval
-  Serial.print(RangeInCentimeters);//0~400cm
-  Serial.println(" cm");
-  delay(250);
+  
 }

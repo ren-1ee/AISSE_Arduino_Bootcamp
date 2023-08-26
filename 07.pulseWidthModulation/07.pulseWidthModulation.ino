@@ -15,24 +15,18 @@
 
   Documentation: 
     https://www.w3schools.com/colors/colors_rgb.aspt
+    https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/07.pulseWidthModulation/Pulse-Width-Modulation.jpg
   Schematic:
     https://www.tinkercad.com/things/drNDsMxGMIY?sharecode=D6x4_xTTRl_zGs7B-XGqfbQhG_xgjj3TVS_c-GNTK-c
-    https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/Ardunio_Bootcamp/06.pulseWidthModulation/Bootcamp-PWMOutput.png
+    https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/07.pulseWidthModulation/Bootcamp-PWMOutput.png
 */
 
-static int redPIN = 3;
-static int greenPIN = 5;
-static int bluenPIN = 6;
+
 
 void setup() {
-  Serial.begin(9600);
-  pinMode(greenPIN, OUTPUT);
-  pinMode(redPIN, OUTPUT);
-  pinMode(bluenPIN, OUTPUT);
+  
 }
 
 void loop() {
-  analogWrite(redPIN, 255)
-  analogWrite(greenPINn, 0)
-  analogWrite(bluePIN, 0)
+  
 }
