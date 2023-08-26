@@ -37,23 +37,11 @@
     
 */
 
-bool myBoolean = true;
-static unsigned int myInt1 = 3;
-static unsigned int myInt2 = 7; 
-
 void setup() {
-  Serial.begin(9600);
-  Serial.println("--TRUE or FALSE?--");
-  Serial.println("-------------------------------------");
-  if (myBoolean) {
-    Serial.println("** It is TRUE! **");
-  } else {
-    Serial.println("** It is FALSE! **");
-  }
-  Serial.println("=====================================");
+  
 }
 
-// The loop function runs over and over again forever
+
 void loop() {
       
 }
