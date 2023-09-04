@@ -23,6 +23,8 @@
     OLED: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/TempeHS_Sensor_Catalogue/Sensor%20Kit/0.96_OLED_Display/0.96_OLED_Display.ino
     3 Axis: Acceleromter: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/TempeHS_Sensor_Catalogue/Sensor%20Kit/3_Axis_Accel_Sensor/3_Axis_Accel_Sensor.ino
     Temperature & Humidity: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/TempeHS_Sensor_Catalogue/Sensor%20Kit/Temp_and_Humid_Sensor/Temp_and_Humid_Sensor.ino
+      DOWNLOAD .cpp AND .ino DHT FILES!
+
     Air Pressure Sensor: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/TempeHS_Sensor_Catalogue/Sensor%20Kit/Air_Pressure_Sensor/Air_Pressure_Sensor.ino
 */
 
@@ -30,6 +32,10 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <Wire.h>
+
+// Declare strings
+String myMessage = "Pogge";
+String myMessage2 = "2.0!";
 
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);  // High speed I2C
 
@@ -42,9 +48,5 @@ void setup() {
 }
 
 void loop() {
-  u8g2.clearBuffer();                   // clear the internal memory
-  u8g2.setFont(u8g2_font_ncenB08_tr);   // choose a suitable font
-  u8g2.drawStr(0,10,"Hello World!");    // write something to the internal memory
-  u8g2.sendBuffer();                    // transfer internal memory to the display
-  delay(1000);  
+  printToOLED(/* Parse variable(s) to function. */myMessage, myMessage2); // Call function.
 }
