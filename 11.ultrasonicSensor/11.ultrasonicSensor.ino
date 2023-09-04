@@ -21,6 +21,7 @@
 
 #include <Servo.h>
 #include "Ultrasonic.h"
+// #include <Ultrasonic.h>
 
 // Create a servo object.
 Servo myServo;
@@ -49,7 +50,9 @@ void setup() {
 // The loop function runs over and over again forever
 void loop() {
   distance = myUS.MeasureInCentimeters();
-  Serial.println(distance);
+  Serial.print("Distance:");
+  Serial.print(distance);
+  Serial.println("cm");
   if (distance < 30) {
     myServo.write(0);
   } else {
