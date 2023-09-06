@@ -28,25 +28,51 @@
     Air Pressure Sensor: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/blob/main/TempeHS_Sensor_Catalogue/Sensor%20Kit/Air_Pressure_Sensor/Air_Pressure_Sensor.ino
 */
 
-// Include libraries
+// Include I2C
 #include <Arduino.h>
-#include <U8g2lib.h>
 #include <Wire.h>
 
-// Declare strings
-String myMessage = "Pogge";
-String myMessage2 = "2.0!";
+// OLED Display
+#include <U8g2lib.h>
 
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);  // High speed I2C
+// Air Pressure
+#include "Seeed_BMP280.h"
+
+// String myMessage = "";
+// String myMessage2 = "";
+
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/SCL, /* data=*/SDA, /* reset=*/U8X8_PIN_NONE);  // High speed I2C
+
+BMP280 bmp280;
 
 void setup() {
+  // Setup serial monitor and debug.
   Serial.begin(9600);
   Serial.println("");
   Serial.println("SM working & configured @9600.");
   Serial.println("-------------------------------------------");
+
+  // Set up OLED screen
   u8g2.begin();
+
+  // Begin comms with pressure sensor.
+  if (!bmp280.init()) {
+    Serial.println("Device error!");
+  }
 }
 
 void loop() {
-  printToOLED(/* Parse variable(s) to function. */myMessage, myMessage2); // Call function.
+  // Measure Air.
+  /*
+  float myTemp = bmp280.getTemperature();
+  float myPressure = bmp280.getPressure();
+  float myAltitude = bmp280.calcAltitude(myPressure);
+  */
+
+  // Delcare variables.\njm
+  // String myMessage = "Good Morning!";
+  // String myMessage2 = "Today's temperature: " + String(myTemp) + "°C";
+
+  // measureAir();
+  printToOLED(myTemp(), myPressure());  // Call function.
 }
